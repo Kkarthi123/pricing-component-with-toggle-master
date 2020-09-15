@@ -1,0 +1,147 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body{
+    background-color:hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color:  hsl(232, 13%, 33%);
+}
+body::before{
+    content: "";
+    background-image: url('../images/bg-top.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    background-position: top right;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+body::after{
+    content: "";
+    background-image: url('../images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-position: bottom left;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#flex{
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    margin-top: 40px;
+    padding-bottom:30px ;
+}
+h1{
+    color:  hsl(233, 13%, 49%);
+}
+.toggle-container{
+    color: hsl(234, 14%, 74%);
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.card{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 10px;
+}
+.card-title p{
+    font-size: 4rem;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.card-title{
+    margin: 0 auto;
+}
+.card-text p{
+    padding: 15px 0;
+    margin: 0 !important;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.card button{
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    color: white;
+    padding: 5px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-2{
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    transform: scale(1.15);
+    z-index: 1;
+}
+.card-2 button{
+    background-image: none;
+    background-color: white !important;
+    color: hsl(237, 63%, 64%);
+}
+.card-2 p{
+    border-color: #f0f0f0;
+}
+.card-2 .card-body{
+    transform: scale(.865);
+}
+.card .monthly{
+    display: none;
+}
+.show-monthly .card .monthly{
+    display: block;
+}
+.show-monthly .card .Annually{
+    display: none;
+}
+label{
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+}
+#ball{
+    background-color: white;
+    width: 25px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top:3px;
+    left: 3px;
+    transition: .3s ease;
+}
+input{
+   display: none;
+}
+.col-md-4{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+@media (max-width:768px)
+{
+    .card-2{
+        transform: scale(1);
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+}
